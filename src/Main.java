@@ -5,13 +5,13 @@ public class Main {
         Cliente bispo = new Cliente();
         bispo.setNome("Bispo");
 
-        Conta cc = new ContaCorrente(bispo);
+        Conta cCorrente = new ContaCorrente(bispo);
         Conta poupanca = new ContaPoupanca(bispo);
 
-        cc.depositar(100);
-        cc.transferir(100, poupanca);
+        cCorrente.depositar(900);
+        cCorrente.transferir(300, poupanca);
 
-        cc.imprimirExtrato();
+        cCorrente.imprimirExtrato();
         poupanca.imprimirExtrato();
     }
 
